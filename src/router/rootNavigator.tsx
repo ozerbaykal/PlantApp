@@ -15,13 +15,17 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 
 
     <Stack.Navigator 
+    initialRouteName={ROOTNAVIGATOR.GET_STARTED}
     screenOptions={{ headerShown: false }}
     >
-        <Stack.Screen name={ROOTNAVIGATOR.ROOT_TABS} component={TabNavigator}/>
 
         <Stack.Screen name={ROOTNAVIGATOR.GET_STARTED} component={GetStarted}/>
         <Stack.Screen name={ROOTNAVIGATOR.ONBOARDING} component={OnBoarding}/>
         <Stack.Screen name={ROOTNAVIGATOR.PAYWALL} component={PayWall}/>
+        <Stack.Screen options={{
+          
+        }} name={ROOTNAVIGATOR.ROOT_TABS} component={TabNavigator}/>
+
 
 
     </Stack.Navigator>
