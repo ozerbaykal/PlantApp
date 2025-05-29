@@ -1,40 +1,55 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Image, ImageBackground, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {moderateScale, scale, verticalScale} from '../../utils/constants';
 import {Colors} from '../../theme/colors';
+import Button from '../../components/button';
 
-const GetStarted = () => {
+const GetStarted: React.FC = () => {
   return (
-    <View style={styles.container}>
-      <View style={styles.box}>
-        <Text numberOfLines={1} style={styles.base}>
-          <Text style={styles.light}>Welcome to </Text>
-          <Text style={styles.regular}>Plant</Text>
-          <Text style={styles.bold}>App</Text>
-        </Text>
+    <ImageBackground
+      source={require('../../assets/images/getStartedBg.png')}
+      style={styles.background}
+      resizeMode="cover">
+      <View style={styles.container}>
+        <View style={styles.box}>
+          <Text numberOfLines={1} style={styles.base}>
+            <Text style={styles.light}>Welcome to </Text>
+            <Text style={styles.regular}>Plant</Text>
+            <Text style={styles.bold}>App</Text>
+          </Text>
 
-        <Text style={styles.subtitle}>
-          Identify more than 3000+ plants and 88% accuracy.
-        </Text>
-      </View>
+          <Text style={styles.subtitle}>
+            Identify more than 3000+ plants and 88% accuracy.
+          </Text>
+        </View>
 
-      <View>
-        <Text>Resim buraya</Text>
-      </View>
+        <Image source={require('../../assets/images/getStartedImage.png')} />
 
-      <View>
-        <Text>Button buraya</Text>
+        <View style={styles.bottomGroup}>
+          <Button title="Get Started" onPress={() => {}} />
+          <Text style={styles.policyText}>
+            By tapping next, you are agreeing to PlantID{' '}
+            <Text style={styles.underline}>Terms of Use</Text> &{' '}
+            <Text style={styles.underline}>Privacy Policy</Text>.
+          </Text>
+        </View>
       </View>
-    </View>
+    </ImageBackground>
   );
 };
 
 export default GetStarted;
 
 const styles = StyleSheet.create({
+  background: {
+    position: 'relative',
+    flex: 1,
+    width: '100%',
+    height: '100%',
+  },
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+
     paddingTop: verticalScale(59),
   },
   box: {
@@ -49,7 +64,7 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(28),
     lineHeight: moderateScale(28),
     letterSpacing: scale(0.07),
-       color: Colors.MAIN_COLOR,
+    color: Colors.MAIN_COLOR,
   },
   light: {
     fontFamily: 'Rubik-Light', // font-weight 300
@@ -58,7 +73,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Rubik-Regular', // font-weight 400
   },
   bold: {
-    fontFamily: 'Rubik-SemiBold', // font-weight 600 (eklediysen)
+    fontFamily: 'Rubik-SemiBold', // font-weight 600
   },
 
   subtitle: {
@@ -70,5 +85,33 @@ const styles = StyleSheet.create({
     opacity: 0.7,
   },
 
- 
+  image: {
+    resizeMode: 'contain',
+    width: '100%',
+    height: verticalScale(499),
+    marginTop: verticalScale(168),
+  },
+  bottomGroup: {
+    width: '100%',
+    alignItems: 'center',
+    paddingHorizontal: scale(24),
+    paddingBottom: verticalScale(24),
+    gap: verticalScale(12),
+    position: 'absolute',
+    top: verticalScale(667),
+  },
+  policyText: {
+    width: scale(232),
+    height: verticalScale(30),
+    fontFamily: 'Rubik-Regular',
+    fontSize: moderateScale(11),
+    lineHeight: verticalScale(15),
+    letterSpacing: scale(0.07),
+    color: Colors.POLICY,
+    textAlign: 'center',
+    opacity: 0.7,
+  },
+  underline: {
+    textDecorationLine: 'underline',
+  },
 });
