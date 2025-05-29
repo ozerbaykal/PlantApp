@@ -1,3 +1,4 @@
+
 export const ROOTNAVIGATOR = {
   GET_STARTED: 'GetStarted',
   ONBOARDING: 'Onboarding',

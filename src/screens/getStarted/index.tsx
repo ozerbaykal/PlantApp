@@ -3,8 +3,13 @@ import React from 'react';
 import {moderateScale, scale, verticalScale} from '../../utils/constants';
 import {Colors} from '../../theme/colors';
 import Button from '../../components/button';
+import { useNavigation } from '@react-navigation/native';
+import { ROOTNAVIGATOR } from '../../utils/routes';
+import { PropsNavigation} from '../../model/ui/rootStackParamList';
 
-const GetStarted: React.FC = () => {
+
+const GetStarted :React.FC<PropsNavigation> = ({navigation}) => {
+
   return (
     <ImageBackground
       source={require('../../assets/images/getStartedBg.png')}
@@ -26,7 +31,7 @@ const GetStarted: React.FC = () => {
         <Image source={require('../../assets/images/getStartedImage.png')} />
 
         <View style={styles.bottomGroup}>
-          <Button title="Get Started" onPress={() => {}} />
+          <Button title="Get Started" onPress={() => navigation.navigate(ROOTNAVIGATOR.ONBOARDING)} />
           <Text style={styles.policyText}>
             By tapping next, you are agreeing to PlantID{' '}
             <Text style={styles.underline}>Terms of Use</Text> &{' '}
