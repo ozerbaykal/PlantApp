@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontWeight: '700',
+   fontFamily:"Rubik-SemiBold",
     fontSize: moderateScale(15),
     color: Colors.WHITE,
     letterSpacing: scale(-0.24),

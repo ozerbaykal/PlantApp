@@ -4,6 +4,7 @@ import { moderateScale, scale, verticalScale } from '../../utils/constants'
 import { Colors } from '../../theme/colors'
 import GradientText from '../../components/GradientText'
 import { ArrowIcon } from '../../assets/icons'
+import { MailIcon } from '../../assets/images'
 
 const PremiumBanner = () => {
 
@@ -14,7 +15,7 @@ const PremiumBanner = () => {
       <View style={{
         position: "relative", width: scale(36), height: verticalScale(30), alignItems: "center"
       }}>
-        <Image source={require('../../assets/images/mailIcon.png')} resizeMode='cover' />
+        <Image source={MailIcon} resizeMode='cover' />
         <View
           style={styles.notification}
         >

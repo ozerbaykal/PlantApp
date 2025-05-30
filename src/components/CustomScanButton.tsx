@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  Image,
-  StyleSheet,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {ScanIcon} from '../assets/icons';
 import {scale, verticalScale} from '../utils/constants';
 
@@ -32,30 +27,25 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     position: 'absolute',
-   width: scale(64),
+    width: scale(64),
     height: verticalScale(64),
   },
   wrapper: {
-   width: scale(64),
+    width: scale(64),
     height: verticalScale(64),
     justifyContent: 'center',
     alignItems: 'center',
-   
   },
   bgImage: {
-   width: scale(64),
+    width: scale(64),
     height: verticalScale(64),
     position: 'absolute',
     resizeMode: 'contain',
-    
-   
-    
   },
   iconWrapper: {
-    width: "100%",
-    height: "100%",
+    width: '100%',
+    height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
- 
   },
 });

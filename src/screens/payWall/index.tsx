@@ -17,6 +17,7 @@ import {features} from '../../utils/features';
 import OptionCard from './optionCard';
 import {Feature} from '../../model/ui/feauturesProps';
 import FeatureCard from './featuredCard';
+import { PaywallBg } from '../../assets/images';
 
 const PayWall: React.FC<PropsNavigation> = ({navigation}) => {
   const [selectedOption, setSelectedOption] = useState<
@@ -31,7 +32,7 @@ const PayWall: React.FC<PropsNavigation> = ({navigation}) => {
   return (
     <View style={{flex: 1, backgroundColor: Colors.MAIN_COLOR}}>
       <ImageBackground
-        source={require('../../assets/images/paywallbg.png')}
+        source={PaywallBg}
         style={[styles.imageBackgroundContainer, {flex: 1}]}>
         <SafeAreaView style={{flex: 1}}>
           <View style={styles.container}>
@@ -112,7 +113,6 @@ const styles = StyleSheet.create({
     fontFamily: 'Rubik-ExtraBold',
     fontSize: moderateScale(30),
     color: Colors.WHITE,
-  
   },
   light: {
     fontWeight: '300',
@@ -139,7 +139,6 @@ const styles = StyleSheet.create({
     opacity: 0.7,
     fontSize: moderateScale(13),
     fontFamily: 'Rubik-regular',
- 
   },
   optionsContainer: {
     marginRight: scale(24),

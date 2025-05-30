@@ -2,7 +2,7 @@ import {Dimensions, Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {moderateScale, scale, verticalScale} from '../../utils/constants';
 import {Colors} from '../../theme/colors';
-import {Artwork} from '../../assets/images';
+import {Artwork, Leaves} from '../../assets/images';
 
 interface PageTwoProps {
   item: any;
@@ -38,7 +38,7 @@ const PageTwo: React.FC<PageTwoProps> = ({item}) => {
         </View>
       </View>
       <Image
-        source={require('../../assets/images/leaves.png')}
+        source={Leaves}
         style={styles.backgroundImage}
         blurRadius={15}
       />
@@ -70,7 +70,6 @@ const styles = StyleSheet.create({
   },
   bold: {
     fontFamily: 'Rubik-ExtraBold',
-
   },
   brush: {
     position: 'absolute',

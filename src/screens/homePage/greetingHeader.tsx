@@ -3,14 +3,12 @@ import {
   Text,
   TextInput,
   StyleSheet,
-  Image,
   Dimensions,
 } from 'react-native';
 import { moderateScale, scale, verticalScale } from '../../utils/constants';
 import { Colors } from '../../theme/colors';
 import { SearchIcon } from '../../assets/icons';
 
-const { width } = Dimensions.get('window');
 
 const GreetingHeader: React.FC = () => {
   return (

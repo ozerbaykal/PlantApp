@@ -19,6 +19,7 @@ import { fetchQuestions } from '../../store/actions/questionActions';
 import { useAppDispatch } from '../../store/hooks';
 import CategoryCard from './categoryCard';
 import { fetchCategories } from '../../store/actions/categoryActions';
+import { LeavesBg } from '../../assets/images';
 
 const Home: React.FC = () => {
   const { questions } = useSelector((state: RootState) => state.questions);
@@ -41,7 +42,7 @@ const Home: React.FC = () => {
           <GreetingHeader />
           <Image
             style={styles.bgImage}
-            source={require('../../assets/images/leaves-bg.png')}
+            source={LeavesBg}
           />
         </View>
       </SafeAreaView>

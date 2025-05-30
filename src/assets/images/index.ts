@@ -1,1 +1,15 @@
 export const Artwork = require('../../assets/images/Artwork.png');
+export const ArtWorkLeft = require('../../assets/images/ArtWorkLeft.png');
+export const ArtWorkRight = require('../../assets/images/ArtWorkRight.png');
+export const Background = require('../../assets/images/Background.png');
+export const Brush = require('../../assets/images/Brush.png');
+export const Content = require('../../assets/images/content.png');
+export const GetStartedImage = require('../../assets/images/GetStartedImage.png');
+export const IPhone = require('../../assets/images/iPhone.png');
+export const LeafLeft = require('../../assets/images/leaf-left.png');
+export const LeafRight = require('../../assets/images/leaf-right.png');
+export const LeavesBg = require('../../assets/images/leaves-bg.png');
+export const Leaves = require('../../assets/images/leaves.png');
+export const MailIcon = require('../../assets/images/mailIcon.png');
+export const PaywallBg = require('../../assets/images/paywallbg.png');
+export const ScanButtonBg = require('../../assets/images/scanButtonBg.png');

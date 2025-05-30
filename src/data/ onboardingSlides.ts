@@ -1,3 +1,4 @@
+import { Brush, Content, IPhone } from "../assets/images";
 import { scale, verticalScale } from "../utils/constants";
 
   export const onboardingSlides = [
@@ -5,8 +6,8 @@ import { scale, verticalScale } from "../utils/constants";
       id: '1',
       title: 'Take a photo to identify\n the plant!',
       boldPart: 'identify',
-      image: require('../assets/images/content.png'),
-      brush: require('../assets/images/Brush.png'),
+      image:Content,
+      brush: Brush,
       brushStyle: {
         position: "absolute",
         resizeMode: "contain",
@@ -20,8 +21,8 @@ import { scale, verticalScale } from "../utils/constants";
       id: '2',
       title: 'Get plant',
       boldPart: ' care guides',
-      image: require('../assets/images/iPhone.png'),
-      brush: require('../assets/images/Brush.png'),
+      image: IPhone,
+      brush: Brush,
       brushStyle: {
         position: "absolute",
         resizeMode: "contain",

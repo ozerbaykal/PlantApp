@@ -1,15 +1,15 @@
 import {Image, ImageBackground, StyleSheet, Text, View} from 'react-native';
-import React from 'react';
 import {moderateScale, scale, verticalScale} from '../../utils/constants';
 import {Colors} from '../../theme/colors';
 import Button from '../../components/button';
 import {ROOTNAVIGATOR} from '../../utils/routes';
 import {PropsNavigation} from '../../model/ui/rootStackParamList';
+import { Background, GetStartedImage } from '../../assets/images';
 
 const GetStarted: React.FC<PropsNavigation> = ({navigation}) => {
   return (
     <ImageBackground
-      source={require('../../assets/images/Background.png')}
+      source={Background}
       style={styles.background}
       resizeMode="cover">
       <View style={styles.container}>
@@ -24,7 +24,7 @@ const GetStarted: React.FC<PropsNavigation> = ({navigation}) => {
           </Text>
         </View>
 
-        <Image source={require('../../assets/images/GetStartedImage.png')} />
+        <Image source={GetStartedImage} />
 
         <View style={styles.bottomGroup}>
           <Button

@@ -3,7 +3,6 @@ import {
   SafeAreaView,
   View,
   FlatList,
-  Image,
   Dimensions,
   StyleSheet,
   NativeScrollEvent,
