@@ -3,14 +3,13 @@ import React from 'react';
 import {moderateScale, scale, verticalScale} from '../../utils/constants';
 import {Colors} from '../../theme/colors';
 import Button from '../../components/button';
-import {useNavigation} from '@react-navigation/native';
 import {ROOTNAVIGATOR} from '../../utils/routes';
 import {PropsNavigation} from '../../model/ui/rootStackParamList';
 
 const GetStarted: React.FC<PropsNavigation> = ({navigation}) => {
   return (
     <ImageBackground
-      source={require('../../assets/images/getStartedBg.png')}
+      source={require('../../assets/images/Background.png')}
       style={styles.background}
       resizeMode="cover">
       <View style={styles.container}>
@@ -26,7 +25,7 @@ const GetStarted: React.FC<PropsNavigation> = ({navigation}) => {
           </Text>
         </View>
 
-        <Image source={require('../../assets/images/getStartedImage.png')} />
+        <Image source={require('../../assets/images/GetStartedImage.png')} />
 
         <View style={styles.bottomGroup}>
           <Button

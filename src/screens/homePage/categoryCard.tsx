@@ -5,12 +5,11 @@ import { Colors } from '../../theme/colors';
 import { moderateScale, scale, verticalScale } from '../../utils/constants';
 import { CategoryCardProps } from '../../model/data/categoryCardProps';
 
-
 const CategoryCard: React.FC<CategoryCardProps> = ({ item }) => {
   return (
-    <TouchableOpacity style={styles.card}>
-      <Image source={{ uri: item.image.url }} style={styles.image} />
+    <TouchableOpacity style={styles.card} activeOpacity={0.8}>
       <Text style={styles.title}>{item.title}</Text>
+      <Image source={{ uri: item.image.url }} style={styles.image} />
     </TouchableOpacity>
   );
 };
@@ -22,28 +21,23 @@ const styles = StyleSheet.create({
     height: verticalScale(152),
     backgroundColor: '#fff',
     borderRadius: scale(16),
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingHorizontal: scale(8),
-    paddingVertical: verticalScale(12),
-    marginBottom: verticalScale(16),
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.1,
-    shadowRadius: 3,
-    
-  },
-  image: {
-    width: scale(72),
-    height: scale(72),
-    resizeMode: 'contain',
-    marginBottom: verticalScale(12),
+    padding: scale(12),
+    justifyContent: 'space-between',
+    overflow: 'hidden',
+    marginVertical:scale(5)
   },
   title: {
-    fontSize: moderateScale(16),
-    fontFamily: 'Rubik-SemiBold',
+    fontSize: moderateScale(15),
+    fontFamily: 'Rubik',
+    fontWeight:"600",
     color: Colors.MAIN_COLOR,
-    textAlign: 'center',
+    marginBottom: verticalScale(8),
+  },
+  image: {
+    width: '100%',
+    height: verticalScale(120),
+    resizeMode: 'contain',
+  
   },
 });
 
