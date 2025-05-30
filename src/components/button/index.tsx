@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   title: {
     fontWeight: '700',
     fontSize: moderateScale(15),
-    color: Colors.WHİTE,
+    color: Colors.WHITE,
     letterSpacing: scale(-0.24),
     textAlign: 'center',
   },

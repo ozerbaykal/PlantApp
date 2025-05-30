@@ -15,9 +15,8 @@ const GetStarted: React.FC<PropsNavigation> = ({navigation}) => {
       <View style={styles.container}>
         <View style={styles.box}>
           <Text numberOfLines={1} style={styles.base}>
-            <Text style={styles.light}>Welcome to </Text>
-            <Text style={styles.regular}>Plant</Text>
-            <Text style={styles.bold}>App</Text>
+            <Text style={styles.regular}>Welcome to </Text>
+            <Text style={styles.bold}>PlantApp</Text>
           </Text>
 
           <Text style={styles.subtitle}>
@@ -71,18 +70,21 @@ const styles = StyleSheet.create({
     letterSpacing: scale(0.07),
     color: Colors.MAIN_COLOR,
   },
-  light: {
-    fontFamily: 'Rubik-Light', // font-weight 300
-  },
   regular: {
-    fontFamily: 'Rubik-Regular', // font-weight 400
+    fontFamily: 'Rubik',
+    fontWeight: '400',
+    letterSpacing: scale(0.17),
+    
   },
   bold: {
-    fontFamily: 'Rubik-SemiBold', // font-weight 600
+    fontFamily: 'Rubik',
+    fontWeight: '600',
   },
 
   subtitle: {
     fontSize: moderateScale(16),
+    fontFamily: 'Rubik',
+    fontWeight: '400',
     color: Colors.MAIN_COLOR,
     lineHeight: verticalScale(22),
     letterSpacing: scale(0.07),
