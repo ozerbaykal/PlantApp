@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, {useRef, useState} from 'react';
 import {
   SafeAreaView,
   View,
@@ -10,52 +10,19 @@ import {
   NativeScrollEvent,
   NativeSyntheticEvent,
 } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { Colors } from '../../theme/colors';
+import {useNavigation} from '@react-navigation/native';
+import {Colors} from '../../theme/colors';
 import Button from '../../components/button';
-import { moderateScale, scale, verticalScale } from '../../utils/constants';
-import { ROOTNAVIGATOR } from '../../utils/routes';
-import { PropsNavigation } from '../../model/ui/rootStackParamList';
+import {moderateScale, scale, verticalScale} from '../../utils/constants';
+import {ROOTNAVIGATOR} from '../../utils/routes';
+import {PropsNavigation} from '../../model/ui/rootStackParamList';
 import PageOne from './pageOne';
 import PageTwo from './pageTwo';
+import {onboardingSlides} from '../../data/ onboardingSlides';
 
-const { width } = Dimensions.get('window');
+const {width} = Dimensions.get('window');
 
-const Onboarding :React.FC<PropsNavigation> = ({navigation}) => {
-
-    const onboardingSlides = [
-    {
-      id: '1',
-      title: 'Take a photo to identify\n the plant!',
-      boldPart: 'identify',
-      image: require('../../assets/images/content.png'),
-      brush: require('../../assets/images/Brush.png'),
-      brushStyle: {
-        position: "absolute",
-        resizeMode: "contain",
-        width: scale(130),
-        height: verticalScale(13),
-        top: verticalScale(34),
-        right: scale(-12),
-      }
-    },
-    {
-      id: '2',
-      title: 'Get plant',
-      boldPart: ' care guides',
-      image: require('../../assets/images/iPhone.png'),
-      brush: require('../../assets/images/Brush.png'),
-      brushStyle: {
-        position: "absolute",
-        resizeMode: "contain",
-        width: scale(152),
-        height: verticalScale(13),
-        top: verticalScale(34),
-        right: scale(6),
-      }
-    },
-  ];
-
+const Onboarding: React.FC<PropsNavigation> = ({navigation}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const flatRef = useRef<FlatList>(null);
 
@@ -66,27 +33,21 @@ const Onboarding :React.FC<PropsNavigation> = ({navigation}) => {
 
   const handleNext = () => {
     if (currentIndex < onboardingSlides.length - 1) {
-      flatRef.current?.scrollToIndex({ index: currentIndex + 1 });
+      flatRef.current?.scrollToIndex({index: currentIndex + 1});
     } else {
       navigation.navigate(ROOTNAVIGATOR.PAYWALL);
     }
   };
 
-    const renderItem = ({ item, index }: any) => {
+  const renderItem = ({item, index}: any) => {
     if (item.id === '1') {
-      return (
-
-        <PageOne item={item} styles={styles} />
-      );
+      return <PageOne item={item} styles={styles} />;
     } else if (item.id === '2') {
-      return (
-        <PageTwo item={item} styles={styles}/>
-      );
+      return <PageTwo item={item} styles={styles} />;
     } else {
       return null;
     }
   };
-
 
   return (
     <SafeAreaView style={styles.container}>
@@ -97,20 +58,14 @@ const Onboarding :React.FC<PropsNavigation> = ({navigation}) => {
         pagingEnabled
         showsHorizontalScrollIndicator={false}
         ref={flatRef}
-        keyExtractor={(item) => item.id}
+        keyExtractor={item => item.id}
         onScroll={handleScroll}
         scrollEventThrottle={16}
       />
 
-    
-
       {/* Button */}
-      <Button
-        title={"Continue"}
-        onPress={handleNext}
-     
-      />
-        {/* Dot Slider */}
+      <Button title={'Continue'} onPress={handleNext} />
+      {/* Dot Slider */}
       <View style={styles.dotsContainer}>
         {[0, 1, 2].map((dot, index) => (
           <View
@@ -148,10 +103,9 @@ const styles = StyleSheet.create({
     marginHorizontal: scale(4),
   },
   artworkStyle: {
-    resizeMode: "cover",
-    position: "absolute",
+    resizeMode: 'cover',
+    position: 'absolute',
     left: scale(0),
-    zIndex: 100
-  }
+    zIndex: 100,
+  },
 });
-
