@@ -1,8 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { fetchQuestions } from '../actions/questionActions';
-import { QuestionState } from '../../model/data/questionState';
-
-
+import {createSlice} from '@reduxjs/toolkit';
+import {fetchQuestions} from '../actions/questionActions';
+import {QuestionState} from '../../model/data/questionState';
 
 const initialState: QuestionState = {
   questions: [],

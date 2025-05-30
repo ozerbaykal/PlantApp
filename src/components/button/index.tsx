@@ -3,10 +3,18 @@ import {ButtonProps} from '../../model/ui/buttonProps';
 import {moderateScale, scale, verticalScale} from '../../utils/constants';
 import {Colors} from '../../theme/colors';
 
-const Button: React.FC<ButtonProps> = ({title,onPress,containerStyle,textStyle}) => {
+const Button: React.FC<ButtonProps> = ({
+  title,
+  onPress,
+  containerStyle,
+  textStyle,
+}) => {
   return (
-    <TouchableOpacity onPress={onPress} style={[styles.button,containerStyle]} activeOpacity={0.8}>
-      <Text style={[styles.title,textStyle]}>{title}</Text>
+    <TouchableOpacity
+      onPress={onPress}
+      style={[styles.button, containerStyle]}
+      activeOpacity={0.8}>
+      <Text style={[styles.title, textStyle]}>{title}</Text>
     </TouchableOpacity>
   );
 };

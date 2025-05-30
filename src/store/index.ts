@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
+import {configureStore} from '@reduxjs/toolkit';
 import questionReducer from './slices/questionSlice';
 import categoryReducer from './slices/categorySlice';
 

@@ -1,7 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { fetchCategories } from '../actions/categoryActions';
-import { CategoryState } from '../../model/data/categoryState';
-
+import {createSlice} from '@reduxjs/toolkit';
+import {fetchCategories} from '../actions/categoryActions';
+import {CategoryState} from '../../model/data/categoryState';
 
 const initialState: CategoryState = {
   categories: [],

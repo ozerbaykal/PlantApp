@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
         color: Colors.MAIN_COLOR,
     },
     bold: {
-        fontFamily: 'Rubik-ExtraBold',
+        fontFamily: 'Rubik',
         fontWeight: '800',
     },
     brush: {

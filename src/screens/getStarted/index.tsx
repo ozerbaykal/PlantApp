@@ -53,7 +53,6 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-
     paddingTop: verticalScale(59),
   },
   box: {
@@ -73,14 +72,11 @@ const styles = StyleSheet.create({
   regular: {
     fontFamily: 'Rubik',
     fontWeight: '400',
-    letterSpacing: scale(0.17),
-    
   },
   bold: {
     fontFamily: 'Rubik',
     fontWeight: '600',
   },
-
   subtitle: {
     fontSize: moderateScale(16),
     fontFamily: 'Rubik',
@@ -88,10 +84,8 @@ const styles = StyleSheet.create({
     color: Colors.MAIN_COLOR,
     lineHeight: verticalScale(22),
     letterSpacing: scale(0.07),
-
     opacity: 0.7,
   },
-
   image: {
     resizeMode: 'contain',
     width: '100%',

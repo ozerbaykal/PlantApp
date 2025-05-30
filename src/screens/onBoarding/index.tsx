@@ -2,7 +2,6 @@ import React, {useRef, useState} from 'react';
 import {
   SafeAreaView,
   View,
-  Text,
   FlatList,
   Image,
   Dimensions,
@@ -10,10 +9,9 @@ import {
   NativeScrollEvent,
   NativeSyntheticEvent,
 } from 'react-native';
-import {useNavigation} from '@react-navigation/native';
 import {Colors} from '../../theme/colors';
 import Button from '../../components/button';
-import {moderateScale, scale, verticalScale} from '../../utils/constants';
+import { scale, verticalScale} from '../../utils/constants';
 import {ROOTNAVIGATOR} from '../../utils/routes';
 import {PropsNavigation} from '../../model/ui/rootStackParamList';
 import PageOne from './pageOne';

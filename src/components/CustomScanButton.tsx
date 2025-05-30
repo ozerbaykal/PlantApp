@@ -3,7 +3,6 @@ import {
   Image,
   StyleSheet,
   TouchableOpacity,
-  TouchableOpacityProps,
   View,
 } from 'react-native';
 import {ScanIcon} from '../assets/icons';
@@ -12,17 +11,15 @@ import {scale, verticalScale} from '../utils/constants';
 const CustomScanButton = (props: any) => {
   return (
     <View style={styles.container}>
-
-    
-    <TouchableOpacity activeOpacity={0.9} style={styles.wrapper} {...props}>
-      <Image
-        source={require('../assets/images/scanButtonBg.png')}
-        style={styles.bgImage}
-      />
-      <View style={styles.iconWrapper}>
-        <ScanIcon   width={28} height={28} fill="#fff" />
-      </View>
-    </TouchableOpacity>
+      <TouchableOpacity activeOpacity={0.9} style={styles.wrapper} {...props}>
+        <Image
+          source={require('../assets/images/scanButtonBg.png')}
+          style={styles.bgImage}
+        />
+        <View style={styles.iconWrapper}>
+          <ScanIcon width={28} height={28} fill="#fff" />
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -37,9 +34,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: 70,
     height: 70,
-  
-  
-  
   },
   wrapper: {
     width: 64,
@@ -59,5 +53,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-
 });
