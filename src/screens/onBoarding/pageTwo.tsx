@@ -2,6 +2,7 @@ import {Dimensions, Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {moderateScale, scale, verticalScale} from '../../utils/constants';
 import {Colors} from '../../theme/colors';
+import {Artwork} from '../../assets/images';
 
 interface PageTwoProps {
   item: any;
@@ -20,10 +21,7 @@ const PageTwo: React.FC<PageTwoProps> = ({item}) => {
         </Text>
         <Image source={item.brush} style={styles.brush} />
       </View>
-      
-      {/* <Image source={require('../../assets/images/ArtWorkLeft.png')} />
-      <Image source={require('../../assets/images/ArtWorkRight.png')} />
-      */}
+
       <View
         style={{
           width: scale(260),
@@ -31,15 +29,12 @@ const PageTwo: React.FC<PageTwoProps> = ({item}) => {
           marginTop: verticalScale(79),
           alignSelf: 'center',
           position: 'relative',
-          
         }}>
         <Image source={item.image} style={styles.contentImage} />
         <View style={styles.artworkContainer}>
-          <Image
-            source={require('../../assets/images/Artwork.png')}
-          
-            style={styles.artworkStyle}
-          />
+          <View style={{width: '100%', height: '100%', position: 'relative'}}>
+            <Image source={Artwork} style={styles.artworkStyle} />
+          </View>
         </View>
       </View>
       <Image
@@ -94,7 +89,6 @@ const styles = StyleSheet.create({
     top: verticalScale(-59),
     left: scale(138),
     zIndex: 10,
-    
   },
   contentImage: {
     width: '100%',

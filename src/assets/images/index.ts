@@ -1,0 +1,1 @@
+export const Artwork = require('../../assets/images/Artwork.png');

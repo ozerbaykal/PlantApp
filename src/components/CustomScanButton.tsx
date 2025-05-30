@@ -28,29 +28,34 @@ export default CustomScanButton;
 
 const styles = StyleSheet.create({
   container: {
-    top: -30,
+    top: verticalScale(-30),
     alignItems: 'center',
     justifyContent: 'center',
     position: 'absolute',
-    width: 70,
-    height: 70,
+   width: scale(64),
+    height: verticalScale(64),
   },
   wrapper: {
-    width: 64,
-    height: 64,
+   width: scale(64),
+    height: verticalScale(64),
     justifyContent: 'center',
     alignItems: 'center',
+   
   },
   bgImage: {
-    width: 64,
-    height: 64,
+   width: scale(64),
+    height: verticalScale(64),
     position: 'absolute',
     resizeMode: 'contain',
+    
+   
+    
   },
   iconWrapper: {
-    width: 64,
-    height: 64,
+    width: "100%",
+    height: "100%",
     justifyContent: 'center',
     alignItems: 'center',
+ 
   },
 });

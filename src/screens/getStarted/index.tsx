@@ -70,8 +70,7 @@ const styles = StyleSheet.create({
     color: Colors.MAIN_COLOR,
   },
   regular: {
-    fontFamily: 'Rubik',
-    fontWeight: '400',
+    fontFamily: 'Rubik-Regular',
   },
   bold: {
     fontFamily: 'Rubik',
@@ -79,8 +78,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: moderateScale(16),
-    fontFamily: 'Rubik',
-    fontWeight: '400',
+    fontFamily: 'Rubik-Regular',
     color: Colors.MAIN_COLOR,
     lineHeight: verticalScale(22),
     letterSpacing: scale(0.07),

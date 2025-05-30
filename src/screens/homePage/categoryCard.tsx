@@ -23,12 +23,13 @@ const styles = StyleSheet.create({
     borderRadius: scale(16),
     borderWidth:scale(0.5),
     borderColor:"#29BB892E",
-    padding: scale(12),
     justifyContent: 'space-between',
     overflow: 'hidden',
     marginVertical:scale(5)
   },
   title: {
+    paddingTop:verticalScale(12),
+    paddingLeft:scale(12),
     fontSize: moderateScale(15),
     fontFamily: 'Rubik',
     fontWeight:"600",
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: verticalScale(120),
-    resizeMode: 'contain',
+    resizeMode: 'cover',
   
   },
 });
