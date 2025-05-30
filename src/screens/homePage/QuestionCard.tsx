@@ -39,13 +39,14 @@ export default QuestionCard;
 const styles = StyleSheet.create({
   card: {
     width: scale(240),
+    height:verticalScale(164),
     marginRight: scale(16),
     borderRadius: scale(18),
     overflow: 'hidden',
   },
   image: {
     width: '100%',
-    height: verticalScale(140),
+    height:"100%",
     resizeMode: 'cover',
   },
   textContainer: {
@@ -59,13 +60,12 @@ const styles = StyleSheet.create({
     fontFamily: 'Rubik',
     fontSize: moderateScale(15),
     fontWeight: '500',
-    marginBottom: verticalScale(4),
-    color: Colors.WHİTE,
+    color: Colors.WHITE,
   },
   subtitle: {
     fontFamily: 'Rubik',
     fontSize: moderateScale(12),
     fontWeight: '400',
-    color: Colors.WHİTE,
+    color: Colors.WHITE,
   },
 });

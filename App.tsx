@@ -16,7 +16,7 @@ const App = () => {
     const checkOnboarding = async () => {
       const isOnboarded = await AsyncStorage.getItem('onboardingFinished');
       setInitialRoute(
-        isOnboarded ? ROOTNAVIGATOR.ROOT_TABS : ROOTNAVIGATOR.ONBOARDING,
+        !isOnboarded ? ROOTNAVIGATOR.ROOT_TABS : ROOTNAVIGATOR.GET_STARTED,
       );
     };
     checkOnboarding();

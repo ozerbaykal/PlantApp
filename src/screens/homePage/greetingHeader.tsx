@@ -15,18 +15,6 @@ const { width } = Dimensions.get('window');
 const GreetingHeader: React.FC = () => {
   return (
     <View style={styles.container}>
-      {/* Sağ yaprak */}
-      <Image
-        source={require('../../assets/images/leaf-right.png')}
-        style={styles.leafRight}
-      />
-
-      {/* Sol yaprak */}
-      <Image
-        source={require('../../assets/images/leaf-left.png')}
-        style={styles.leafLeft}
-      />
-
       {/* Yazılar */}
       <View style={styles.textBox}>
         <Text style={styles.subtitle}>Hi, plant lover!</Text>
@@ -35,7 +23,7 @@ const GreetingHeader: React.FC = () => {
 
       {/* Arama kutusu */}
       <View style={styles.searchBox}>
-        <SearchIcon width={scale(16)} height={scale(16)} style={styles.searchIcon} />
+        <SearchIcon width={scale(16)} height={scale(16)} />
         <TextInput
           placeholder="Search for plants"
           placeholderTextColor="#8C8C8C"
@@ -50,11 +38,11 @@ export default GreetingHeader;
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    paddingTop: verticalScale(40),
     paddingBottom: verticalScale(20),
     paddingHorizontal: scale(24),
-    backgroundColor: '#fff',
+    backgroundColor: 'transparent',
     overflow: 'hidden',
+    zIndex:10
   },
   textBox: {
     marginBottom: verticalScale(16),
@@ -79,12 +67,14 @@ const styles = StyleSheet.create({
     borderRadius: scale(16),
     paddingHorizontal: scale(16),
     height: verticalScale(48),
+    gap:scale(12),
+    borderWidth:0.2,
+    borderColor:"#3C3C4340"
   },
   searchIcon: {
     width: scale(16),
     height: scale(16),
-    marginRight: scale(12),
-
+    marginRight: scale(12)
   },
   input: {
     flex: 1,

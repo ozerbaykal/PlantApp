@@ -21,6 +21,8 @@ const styles = StyleSheet.create({
     height: verticalScale(152),
     backgroundColor: '#fff',
     borderRadius: scale(16),
+    borderWidth:scale(0.5),
+    borderColor:"#29BB892E",
     padding: scale(12),
     justifyContent: 'space-between',
     overflow: 'hidden',
