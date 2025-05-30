@@ -32,6 +32,7 @@ const TabNavigator :React.FC   = () => {
       borderTopRightRadius: moderateScale(24),
       backgroundColor: '#fff',
       position: 'absolute',
+       overflow: 'visible'
     },
     tabBarActiveTintColor: Colors.GREEN,
     tabBarInactiveTintColor: Colors.GRAY,

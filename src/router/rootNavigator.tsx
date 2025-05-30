@@ -15,7 +15,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 
 
     <Stack.Navigator 
-    initialRouteName={ROOTNAVIGATOR.ROOT_TABS}
+    initialRouteName={ROOTNAVIGATOR.PAYWALL}
     screenOptions={{ headerShown: false }}
     >
 

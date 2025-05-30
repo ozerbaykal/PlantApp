@@ -11,23 +11,39 @@ import {scale, verticalScale} from '../utils/constants';
 
 const CustomScanButton = (props: any) => {
   return (
+    <View style={styles.container}>
+
+    
     <TouchableOpacity activeOpacity={0.9} style={styles.wrapper} {...props}>
       <Image
         source={require('../assets/images/scanButtonBg.png')}
         style={styles.bgImage}
       />
       <View style={styles.iconWrapper}>
-        <ScanIcon width={28} height={28} fill="#fff" />
+        <ScanIcon   width={28} height={28} fill="#fff" />
       </View>
     </TouchableOpacity>
+    </View>
   );
 };
 
 export default CustomScanButton;
 
 const styles = StyleSheet.create({
-  wrapper: {
+  container: {
     top: -30,
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'absolute',
+    width: 70,
+    height: 70,
+  
+  
+  
+  },
+  wrapper: {
+    width: 64,
+    height: 64,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -43,4 +59,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+
 });
