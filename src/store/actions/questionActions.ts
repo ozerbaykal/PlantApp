@@ -7,8 +7,10 @@ export const fetchQuestions = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await getRequest({}, API_ENDPOINTS.GET_QUESTIONS);
+      console.log('Questions Response:', response.data);
       return response.data;
     } catch (error: any) {
+       console.log('FETCH ERROR:', error);
       return rejectWithValue(error.message);
     }
   }

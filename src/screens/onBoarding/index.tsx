@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import {
+  SafeAreaView,
   View,
   Text,
   FlatList,
@@ -15,26 +16,45 @@ import Button from '../../components/button';
 import { moderateScale, scale, verticalScale } from '../../utils/constants';
 import { ROOTNAVIGATOR } from '../../utils/routes';
 import { PropsNavigation } from '../../model/ui/rootStackParamList';
+import PageOne from './pageOne';
+import PageTwo from './pageTwo';
 
 const { width } = Dimensions.get('window');
 
 const Onboarding :React.FC<PropsNavigation> = ({navigation}) => {
-  const onboardingSlides = [
-  {
-    id: '1',
-    title: 'Take a photo to identify\nthe plant!',
-    boldPart: 'the plant!',
-    image: require('../../assets/images/content.png'),
-    brush: require('../../assets/images/Brush.png'),
-  },
-  {
-    id: '2',
-    title: 'Get plant care guides',
-    boldPart: ' care guides!',
-    image: require('../../assets/images/iPhone.png'),
-    brush: require('../../assets/images/Brush.png'),
-  },
-];
+
+    const onboardingSlides = [
+    {
+      id: '1',
+      title: 'Take a photo to identify\n the plant!',
+      boldPart: 'identify',
+      image: require('../../assets/images/content.png'),
+      brush: require('../../assets/images/Brush.png'),
+      brushStyle: {
+        position: "absolute",
+        resizeMode: "contain",
+        width: scale(130),
+        height: verticalScale(13),
+        top: verticalScale(34),
+        right: scale(-12),
+      }
+    },
+    {
+      id: '2',
+      title: 'Get plant',
+      boldPart: ' care guides',
+      image: require('../../assets/images/iPhone.png'),
+      brush: require('../../assets/images/Brush.png'),
+      brushStyle: {
+        position: "absolute",
+        resizeMode: "contain",
+        width: scale(152),
+        height: verticalScale(13),
+        top: verticalScale(34),
+        right: scale(6),
+      }
+    },
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const flatRef = useRef<FlatList>(null);
@@ -52,21 +72,24 @@ const Onboarding :React.FC<PropsNavigation> = ({navigation}) => {
     }
   };
 
-  const renderItem = ({ item }: any) => (
-    <View style={styles.slide}>
-      <View style={styles.titleContainer}>
-        <Text style={styles.title}>
-          {item.title.split(item.boldPart)[0]}
-          <Text style={styles.bold}>{item.boldPart}</Text>
-        </Text>
-        <Image source={item.brush} style={styles.brush} />
-      </View>
-      <Image source={item.image} style={styles.contentImage} />
-    </View>
-  );
+    const renderItem = ({ item, index }: any) => {
+    if (item.id === '1') {
+      return (
+
+        <PageOne item={item} styles={styles} />
+      );
+    } else if (item.id === '2') {
+      return (
+        <PageTwo item={item} styles={styles}/>
+      );
+    } else {
+      return null;
+    }
+  };
+
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <FlatList
         data={onboardingSlides}
         renderItem={renderItem}
@@ -102,7 +125,7 @@ const Onboarding :React.FC<PropsNavigation> = ({navigation}) => {
           />
         ))}
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -111,41 +134,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-  },
-  slide: {
-    width,
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-  },
-  titleContainer: {
-    marginTop: verticalScale(59),
-    paddingHorizontal: scale(24),
-    alignItems: 'center',
-  },
-  title: {
-    fontSize: moderateScale(28),
-    fontFamily: 'Rubik-Medium',
-    fontWeight: '500',
-    letterSpacing: scale(-1),
-    textAlign: 'center',
-    lineHeight: moderateScale(28),
-    color: Colors.MAIN_COLOR,
-  },
-  bold: {
-    fontFamily: 'Rubik-ExtraBold',
-    fontWeight: '800',
-  },
-  brush: {
-    width: scale(136),
-    height: verticalScale(13),
-    marginTop: verticalScale(8),
-    marginLeft: scale(80),
-  },
-  contentImage: {
-    width: scale(375),
-    height: verticalScale(530),
-    resizeMode: 'contain',
-    marginTop: verticalScale(30),
   },
   dotsContainer: {
     flexDirection: 'row',
@@ -159,5 +147,11 @@ const styles = StyleSheet.create({
     borderRadius: scale(4),
     marginHorizontal: scale(4),
   },
+  artworkStyle: {
+    resizeMode: "cover",
+    position: "absolute",
+    left: scale(0),
+    zIndex: 100
+  }
 });
 
