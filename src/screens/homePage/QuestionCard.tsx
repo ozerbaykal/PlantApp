@@ -57,15 +57,13 @@ const styles = StyleSheet.create({
     bottom: 25,
   },
   title: {
-    fontFamily: 'Rubik',
+    fontFamily: 'Rubik-Medium',
     fontSize: moderateScale(15),
-    fontWeight: '500',
     color: Colors.WHITE,
   },
   subtitle: {
-    fontFamily: 'Rubik',
+    fontFamily: 'Rubik-Regular',
     fontSize: moderateScale(12),
-    fontWeight: '400',
     color: Colors.WHITE,
   },
 });

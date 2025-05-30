@@ -50,15 +50,14 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: moderateScale(14),
     color: Colors.MAIN_COLOR,
-    fontFamily: 'Rubik',
-    fontWeight:"400"
+    fontFamily: 'Rubik-Regular',
+
   },
   title: {
     fontSize: moderateScale(24),
     lineHeight:verticalScale(28),
-    fontWeight: '700',
     color: Colors.MAIN_COLOR,
-    fontFamily: 'Rubik',
+    fontFamily: 'Rubik-Medium',
   },
   searchBox: {
     flexDirection: 'row',

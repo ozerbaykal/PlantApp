@@ -63,15 +63,14 @@ const styles = StyleSheet.create({
   title: {
     paddingTop: verticalScale(5),
     fontSize: moderateScale(28),
-    fontFamily: 'Rubik',
-    fontWeight: '500',
+    fontFamily: 'Rubik-Medium',
     letterSpacing: scale(-1),
     lineHeight: moderateScale(28, 0.5),
     color: Colors.MAIN_COLOR,
   },
   bold: {
-    fontFamily: 'Rubik',
-    fontWeight: '800',
+    fontFamily: 'Rubik-ExtraBold',
+
   },
   brush: {
     position: 'absolute',

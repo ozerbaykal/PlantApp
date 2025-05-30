@@ -110,8 +110,7 @@ const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontSize: moderateScale(15),
-    fontFamily: 'Rubik',
-    fontWeight: '500',
+    fontFamily: 'Rubik-Medium',
     color: '#1D1E1C',
     marginBottom: verticalScale(16),
     lineHeight: moderateScale(20),

@@ -109,10 +109,10 @@ const styles = StyleSheet.create({
     marginLeft: scale(24),
   },
   title: {
-    fontFamily: 'Rubik',
+    fontFamily: 'Rubik-ExtraBold',
     fontSize: moderateScale(30),
     color: Colors.WHITE,
-    fontWeight: '800',
+  
   },
   light: {
     fontWeight: '300',
@@ -138,7 +138,8 @@ const styles = StyleSheet.create({
     color: Colors.WHITE,
     opacity: 0.7,
     fontSize: moderateScale(13),
-    fontWeight: '400',
+    fontFamily: 'Rubik-regular',
+ 
   },
   optionsContainer: {
     marginRight: scale(24),
@@ -154,7 +155,7 @@ const styles = StyleSheet.create({
   confirmBtnText: {
     fontSize: moderateScale(16),
     color: Colors.WHITE,
-    fontFamily: 'Rubik',
+    fontFamily: 'Rubik-medium',
     textAlign: 'center',
     paddingVertical: verticalScale(14),
   },

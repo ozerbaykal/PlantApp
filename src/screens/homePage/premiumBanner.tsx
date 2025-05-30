@@ -31,7 +31,7 @@ const PremiumBanner = () => {
           colors={["#E5C990", "#E4B046"]}
           textStyle={{
             fontSize: moderateScale(16),
-            fontWeight: 600
+        fontFamily:"Rubik-SemiBold"
           }}
           gradientStyle={{
             height: verticalScale(21)
@@ -42,6 +42,7 @@ const PremiumBanner = () => {
           colors={["#FFDE9C", "#F5C25B"]}
           textStyle={{
             fontSize: moderateScale(13),
+                fontFamily:"Rubik-Regular"
           }}
           gradientStyle={{
             height: verticalScale(16)

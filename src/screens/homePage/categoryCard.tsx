@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
-import { Category } from '../../model/data/categoryState';
+import { Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { Colors } from '../../theme/colors';
 import { moderateScale, scale, verticalScale } from '../../utils/constants';
 import { CategoryCardProps } from '../../model/data/categoryCardProps';
@@ -31,8 +30,7 @@ const styles = StyleSheet.create({
     paddingTop:verticalScale(12),
     paddingLeft:scale(12),
     fontSize: moderateScale(15),
-    fontFamily: 'Rubik',
-    fontWeight:"600",
+    fontFamily: 'Rubik-SemiBold',
     color: Colors.MAIN_COLOR,
     marginBottom: verticalScale(8),
   },

@@ -71,12 +71,12 @@ import { OptionCardProps } from "../../model/ui/optionCardProps";
     optionTitle: {
       fontSize: moderateScale(16),
       color: Colors.WHITE,
-      fontWeight: '500'
+     fontFamily:"Rubik-Medium"
     },
     optionSubtitle: {
       fontSize: moderateScale(12),
       color: Colors.GRAY,
-      fontWeight: '300'
+         fontFamily:"Rubik-Light"
     },
     checkboxContainer: {
       marginLeft: scale(16),
@@ -115,7 +115,7 @@ import { OptionCardProps } from "../../model/ui/optionCardProps";
     saveLabelText: {
       color: Colors.WHITE,
       fontSize: moderateScale(12),
-      fontWeight: '500'
+      fontFamily:"Rubik-Medium"
     }
   })
 

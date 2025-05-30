@@ -65,16 +65,16 @@ const styles = StyleSheet.create({
   base: {
     width: scale(286),
     fontSize: moderateScale(28),
-    lineHeight: moderateScale(28),
     letterSpacing: scale(0.07),
+    lineHeight: moderateScale(33),
     color: Colors.MAIN_COLOR,
   },
   regular: {
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Rubik-Regular', //400
+    letterSpacing: scale(0.07),
   },
   bold: {
-    fontFamily: 'Rubik',
-    fontWeight: '600',
+    fontFamily: 'Rubik-Semibold', //600
   },
   subtitle: {
     fontSize: moderateScale(16),
