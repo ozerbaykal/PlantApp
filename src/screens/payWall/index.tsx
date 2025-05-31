@@ -17,7 +17,8 @@ import {features} from '../../utils/features';
 import OptionCard from './optionCard';
 import {Feature} from '../../model/ui/feauturesProps';
 import FeatureCard from './featuredCard';
-import { PaywallBg } from '../../assets/images';
+import {PaywallBg} from '../../assets/images';
+import {CloseIcon} from '../../assets/icons';
 
 const PayWall: React.FC<PropsNavigation> = ({navigation}) => {
   const [selectedOption, setSelectedOption] = useState<
@@ -35,6 +36,12 @@ const PayWall: React.FC<PropsNavigation> = ({navigation}) => {
         source={PaywallBg}
         style={[styles.imageBackgroundContainer, {flex: 1}]}>
         <SafeAreaView style={{flex: 1}}>
+          <TouchableOpacity
+            style={styles.closeBtn}
+            onPress={handleOnboardingEnd}>
+            <CloseIcon />
+          </TouchableOpacity>
+
           <View style={styles.container}>
             <View>
               <Text style={styles.title}>
@@ -173,5 +180,12 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(11),
     textAlign: 'center',
     marginTop: verticalScale(10),
+  },
+  closeBtn: {
+    position: 'absolute',
+    top: verticalScale(8),
+    right: scale(16),
+    backgroundColor: 'rgba(0,0,0,0.4)',
+    borderRadius: 100,
   },
 });

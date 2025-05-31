@@ -1,4 +1,3 @@
-
 export interface Questions {
   id: number;
   title: string;
@@ -7,8 +6,6 @@ export interface Questions {
   uri: string;
   order: number;
 }
-
-
 
 export interface QuestionState {
   questions: Questions[];

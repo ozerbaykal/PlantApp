@@ -9,14 +9,13 @@ import {ROOTNAVIGATOR} from './src/utils/routes';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const App = () => {
-  
   const [initialRoute, setInitialRoute] = useState<string | null>(null);
-  
+
   useEffect(() => {
     const checkOnboarding = async () => {
       const isOnboarded = await AsyncStorage.getItem('onboardingFinished');
       setInitialRoute(
-        !isOnboarded ? ROOTNAVIGATOR.ROOT_TABS : ROOTNAVIGATOR.GET_STARTED,
+        isOnboarded ? ROOTNAVIGATOR.ROOT_TABS : ROOTNAVIGATOR.GET_STARTED,
       );
     };
     checkOnboarding();

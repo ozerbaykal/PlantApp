@@ -1,5 +1,5 @@
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { ROOTNAVIGATOR } from "../../utils/routes";
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {ROOTNAVIGATOR} from '../../utils/routes';
 
 export type RootStackParamList = {
   [ROOTNAVIGATOR.GET_STARTED]: undefined;
@@ -14,4 +14,4 @@ interface PropsNavigation {
   navigation: NavigationProp;
 }
 
-export type{ PropsNavigation}
+export type {PropsNavigation};

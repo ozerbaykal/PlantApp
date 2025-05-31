@@ -1,7 +1,4 @@
-
-
-
-export interface Category{
+export interface Category {
   id: number;
   name: string;
   title: string;
@@ -12,8 +9,8 @@ export interface Category{
     height: number;
   };
 }
-export interface CategoryState{
-    categories:Category[]
-    loading:boolean,
-    error:string |null
+export interface CategoryState {
+  categories: Category[];
+  loading: boolean;
+  error: string | null;
 }
