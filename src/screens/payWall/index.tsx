@@ -14,7 +14,7 @@ import {PropsNavigation} from '../../model/ui/rootStackParamList';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {ROOTNAVIGATOR} from '../../utils/routes';
 import {features} from '../../utils/features';
-import OptionCard from './optionCard';
+import OptionCard from './temp';
 import {Feature} from '../../model/ui/feauturesProps';
 import FeatureCard from './featuredCard';
 import {PaywallBg} from '../../assets/images';
