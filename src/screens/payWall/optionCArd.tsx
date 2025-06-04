@@ -43,7 +43,7 @@ const OptionCard = ({
       <TouchableOpacity onPress={() => setSelected(thisOption)}>
         <LinearGradient
           collapsable={false}
-          colors={['#28AF6E00', '#28AF6E3D']} // Gradient renkleri
+          colors={['#28AF6E00', '#28AF6E3D']} 
           start={{x: 0.6, y: 0}}
           end={{x: 1, y: 0}}
           style={{borderRadius: 10}} // LinearGradient'e border radius
